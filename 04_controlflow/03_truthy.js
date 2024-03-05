@@ -28,8 +28,8 @@ truthy values: true, "0", 'false', " ", [], {}, function(){}
 // console.log(val1);
 
 /* Terniary Operators*/
-const iceTeaPrice = 100;
+// const iceTeaPrice = 100;
 
 // condition ? true : false
-iceTeaPrice >= 80 ? console.log("Greater than 80") : console.log("Less than 80");
+// iceTeaPrice >= 80 ? console.log("Greater than 80") : console.log("Less than 80");
 
