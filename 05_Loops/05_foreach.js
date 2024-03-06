@@ -1,4 +1,5 @@
 /* FOR EACH*/ 
+// For each will not return anything.
 // array.forEach(element => {});
 
 // const coding = ['js', 'cpp', 'py', 'rb', 'java'];
