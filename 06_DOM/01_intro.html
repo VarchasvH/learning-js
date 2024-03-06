@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: darkkhaki
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 id = "title" class = "Heading"> DOM Learning from `Chai Aur Code`<span style="display: none;">test text</span></h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <h3>Lorem ipsum dolor sit.</h3>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <input type="password" name="psswd" id="psswd">
+        <p>Lorem ipsum dolor sit amet. </p>
+
+        <ul>
+            <li class = "list">1</li>
+            <li class = "list">2</li>
+            <li class = "list">3</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+<!-- What we Learned ----------------------------------------------------------------
+1. document.innerText: Prints all the visible text. span tag will not be printed
+2. document.textContent: Prints all text, even if it's not displayed. Eg: span tag will be printed even though it's not be displayed.
+3. document.innerHTML: Prints all the inner HTML, including tags. prints the whole thing inside h1 tag with html, such as <span>...</span> 
+4. You can also use: document.getElementById/ByClassName/ByName etc.
+-->
+
+
+<!-- Query Selector --------------------
+1. document.querySelector('h1'): Will give the first element with the tag 'h1'.
+2. document.querySelectorAll('#title'): Will give the first element with the id: 'title'.
+3. document.querySelector('input[type="password"]'): Will give the first password type input.
+
+
+
+---- Query Selector All (NodeList)----
+1. document.querySelectorAll('h1'): Will give all the elements with the tag 'h1'.
+2. It always return nodeList which is similar to an array but does not have the same functions.
+3. We can access a specfic element by defining the index number of the element.
+4. We can use ForEach loop for NodeList operations
+Eg- const mq = document.querySelectorAll('h1')
+    mq[0].style.color = 'green'
+
+
+
+---- HTMLCollection ----
+1. document.getElementsByClassName('list') would return a HTMLCollection.
+2. HTMLCollection needs to be converted into an array to use Loops
+    Eg: Array.from(TempClassList)
+
+
+
+
+
+-->
