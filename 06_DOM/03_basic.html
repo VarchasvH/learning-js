@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Create Element</title>
+</head>
+<body style="background-color: #212121; color: aquamarine;">
+
+</body>
+<script>
+    const newDiv = document.createElement('div');
+    newDiv.id = Math.round((Math.random()*100) + 1);
+    newDiv.className = "main";
+    newDiv.setAttribute("title", "Generative title");
+    newDiv.style.backgroundColor = "green";
+    newDiv.style.color = "white";
+    newDiv.style.padding = "12px";
+
+    // There are two ways to add text into the div using JS
+    /*1 - Two RoundTrips, 1 to get the code and 2nd to set it*/
+    newDiv.innerText="ChaiAurCode from newDiv.innerText. \n";
+
+    /*2 - Two RoundTrips as well but first we create a text node and then we append it.*/
+    const addText = document.createTextNode("Varchasv Hoon from document.createTextNode.");
+    newDiv.appendChild(addText);
+
+    document.body.appendChild(newDiv);
+    // console.log(newDiv); 
+</script>
+</html>

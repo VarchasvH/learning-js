@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Final DOM Video | ChaiAurCode </title>
+</head>
+<body style="background-color: #414141; color: khaki;">
+    <ul class = "language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    /* -------------------------- ADD ELEMENTS(.appendChild()) ------------------------- */
+    // Brute force method
+    function addLanguage(langName){
+        const newListElement = document.createElement('li'); // creates the li tag
+        newListElement.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(newListElement);
+    };
+    addLanguage("Python");
+
+
+    // Optimized Method
+    function optimizedAddLanguage(langName){
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+
+    };
+    optimizedAddLanguage("Golang");
+
+    /* -------------------------- EDIT ELEMENTS(.replaceWith()) ------------------------- */
+    // Brute Force Method
+    const firstEdit = document.querySelector("li:nth-child(2)");
+    firstEdit.innerHTML = "Gojo";
+
+    // Optmized Method - Arguable
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo";
+    firstEdit.replaceWith(newLi);
+
+    // Replace Js with Ts - Another Edit method
+    const jsIndex = document.querySelector('li:first-child');
+    jsIndex.outerHTML = '<li>TypeScript</li>'
+
+    /* -------------------------- REMOVE ELEMENTS(.remove()) ------------------------- */
+    const removeLi = document.querySelector('li:last-child');
+    removeLi.remove();
+
+</script>
+</html>
