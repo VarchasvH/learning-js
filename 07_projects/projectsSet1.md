@@ -1,6 +1,6 @@
 # Projects Related to DOM
 ## Project Links: 
-[StackBlitz](https://stackblitz.com/edit/dom-project-chaiaurcode-tk9du3?file=index.html) 
+[StackBlitz - CodeAurChai](https://stackblitz.com/edit/dom-project-chaiaurcode-tk9du3?file=index.html) 
 
 # Solution Codes
 
