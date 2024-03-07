@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: #A5C9FF;
+        }
+    </style>
+</head>
+<body>
+    <h1>VarchasvH</h1>
+    <button id = stop style="background-color: #636363; color: #A5C9FF;">STOP!</button>
+</body>
+<script>
+    const sayVarchasv = () => {
+        console.log("Varchasv Hoon")
+    };
+    const changeText = () =>{
+        document.querySelector('h1')
+        .innerHTML = "Changed your Code, haha!"
+    };
+    const changeMe = setTimeout(changeText, 2000);
+    // clearTimeout(changeMe);
+    document.querySelector('#stop').
+    addEventListener('click', ()=>{
+        clearTimeout(changeMe);
+        console.log('stopped')
+    });
+
+</script>
+</html>
