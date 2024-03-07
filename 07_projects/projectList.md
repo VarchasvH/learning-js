@@ -172,3 +172,63 @@ function newGame() {
   });
 }
 ```
+## Project 5 - [KeyBoard Key Press](https://stackblitz.com/edit/dom-project-chaiaurcode-tk9du3?file=5-keyboard%2Fchaiaurcode.js)
+```javascript
+const insert = document.querySelector('#insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+    <div class = "color">
+    <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space' : e.key}</td>
+    <td>${e.keyCode}</td> <!--Depracated -->
+    <td>${e.code}</td>
+  </tr>
+</table>
+    </div>
+  `;
+});
+```
+
+## Project 6 - [Unlimited Background Colors](https://stackblitz.com/edit/dom-project-chaiaurcode-tk9du3?file=6-unlimitedColors%2Fchaiaurcode.js)
+```javascript
+// Generate Random RGBA Color FOR BACKGROUND COLOR STRING
+
+function getRGBA() {
+  let random1 = Math.floor(Math.random() * 255);
+  let random2 = Math.floor(Math.random() * 255);
+  let random3 = Math.floor(Math.random() * 255);
+  return `rgba(${random1},${random2},${random3})`;
+}
+let intervalId;
+const startChangingColor = () => {
+  // To make sure that if we press start again and again it does not run.
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+  function changeBgColor() {
+    document.body.style.backgroundColor = getRGBA();
+  }
+};
+const stopChangingColor = () => {
+  clearInterval(intervalId);
+  // Since we are not using intervalId after it's stopped, it's a good practice to empty it.
+  intervalId = null;
+};
+document.querySelector('#start').addEventListener('click', startChangingColor);
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+```
+
+
+
+
+
+
+
