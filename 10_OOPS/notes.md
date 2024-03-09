@@ -22,3 +22,7 @@ The code was starting to get messy - Spaghetti Code and to use some good service
 3. **Encapsulation** - Create a wrapper around code.
 4. **Polymorphism** - One method can do many things.
 
+#### Notes
+- First step, Whenever we use 'new' keyword, a new object is created which is also called an Instance.
+- Second step, The constructor function is called due to new keyword.
+- Third step, This keyword injects all the arguements inside the object.
