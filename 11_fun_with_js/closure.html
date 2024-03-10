@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur Chai</title>
+</head>
+<body style="background-color: #414141;">
+    <button id = "orange">Orange</button>
+    <button id = "white">White</button>
+    <button id = "green">Green</button>
+</body>
+<script>
+    /*
+     Lexical scoping means that a function inside another function can access the variables from the parent fucntions but the parent function cannot access the variables from the child function.
+ 
+    Closure means that if a function is returned, it will return with the complete lexical scope and not only with the function context. Meaning = displayName() when returned will also return the value of name with it, as it's inside the lexical scope*/
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
+
+    // const myFunc = makeFunc();
+    // myFunc();
+    
+
+    // document.getElementById('orange').onclick = function(){
+    //     document.body.style.backgroundColor = 'orange';
+    // }
+    // document.getElementById('green').onclick = function(){
+    //     document.body.style.backgroundColor = 'green';
+    // }
+    // document.getElementById('white').onclick = function(){
+    //     document.body.style.backgroundColor = 'white';
+    // }
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor = color;
+        
+        // This works because closure returns with the lexical scope
+        return function(){
+            document.body.style.backgroundColor = color;
+
+        }
+    }
+    document.getElementById('orange').onclick = clickHandler('orange');
+    document.getElementById('white').onclick = clickHandler('white');
+    document.getElementById('green').onclick = clickHandler('green');
+</script>
+</html>
